@@ -1,0 +1,90 @@
+/*
+  la foto del fondo va a tener siempre las dimensiones de la ventana, si la redimensionas la imagen tambien se redimensiona
+*/
+body{
+  background-image: url('../img/bg.jpg');
+  background-size: 100vw 100vh;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: white;
+}
+/*
+  Con los td.left y td.right podemos controlar el tamaño de cada td para cada fila, porque si no la guitarra se veria muy pequeña
+*/
+td.left{
+  width:70%;
+}
+td.right{
+  width:30%;
+}
+/*
+  Le ponemos un borde blanco debajo de cada fila para distinguirlas
+*/
+tr{
+  border-bottom: solid 1px white;
+}
+
+/*
+  Este blackscreen es el que desaparece al principio cuando carga la pagina, lo que pasa realmente es que al div
+  que tiene el id blackscreen le pongo tambien la clase animated, y como indico abajo, si el div pertenece tanto al id
+  como a la clase el background color cambia de opacidad.
+*/
+#blackscreen{
+  opacity:1;
+  background-color: rgba(1,1,1,1);
+  height: 100vh;
+  transition: background-color 5s;
+  overflow:hidden;
+}
+#blackscreen.animated{
+  background-color: rgba(1, 1, 1, 0.7);
+}
+
+/*
+  la clase content es la que agrupa todo el contenido de la pagina una vez ya ha cargado
+*/
+.content{
+  margin-top: 5%;
+  opacity: 1;
+}
+/*
+  este img nos sirve para controlar la animacion cuando pasamos el raton por encima
+*/
+/*img{
+  height: 15%;
+  width:auto;
+  transition: height 0.5s;
+}
+img:hover{
+  height: 40%;
+  height:auto;
+}*/
+
+/*
+ esto crea un div con bordes redondeados un 50%, esto significa que el div se convierte en un circulo con un borde de color blanco,
+ despues se anima con el @keyframe, cada porcentaje se refiere a un momento, es decir 0% se refiere al principio de la animacion y
+ el 100% es el final de la animacion.
+*/
+.loader {
+    border: 6px solid rgba(0,0,0,0); /* Light grey */
+    border-top: 6px solid white; /* Blue */
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.mystyle{
+  color:white!important;
+  background: none !important;
+  padding: 7px 7px 7px 7px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: white;
+  border-radius: 20px;
+}

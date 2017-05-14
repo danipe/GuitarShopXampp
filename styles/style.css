@@ -1,0 +1,71 @@
+/*
+Definicion del body, aqui se define la foto del fondo, que tenga un ajuste automatico en cuanto al ancho y alto, que no se repita
+y que al hacer scroll se quede quieta. Además se establece el blanco como color predeterminado del body.
+*/
+body{
+  background-image: url('../img/background.jpg');
+  background-size: 100vw 100vh;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: white;
+}
+/*
+Top margin para poner un margen al form en cuanto al texto de arriba de la pagina.
+*/
+.top-margin{
+  margin-top:20%;
+}
+/*
+Form login para que cada campo a rellenar se vea con bordes blancos y redondeados.
+*/
+.form-login{
+  background: none;
+  padding: 7px 7px 7px 7px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: white;
+  border-radius: 20px;
+  height: 40%;
+}
+
+
+/*
+Este focus sirve para que al clickar encima no salga un borde azul que queda como el culo
+*/
+.form-login:focus{
+  outline-width: 0;
+}
+/*
+Login button y login button:hover para que el boton de iniciar sesion se vea con bordes blancos y redondeados
+ademas de tener la transicion de color a blanco que dura 1 segundo.
+*/
+.login-button{
+  background: none;
+  border-style: solid;
+  border-width: 1px;
+  border-color: white;
+  border-radius: 20px;
+  height: 40%;
+  transition: background-color 1s;
+}
+.login-button:hover{
+  background-color: white;
+}
+/*
+Este focus sirve para que al clickar encima no salga un borde azul que queda como el culo
+*/
+.login-button:focus{
+  outline-width: 0;
+}
+
+.fade{
+  background-color: rgba(0,0,0,0.7);
+}
+/*
+Esto es lo que hace que la foto del fondo se vea mas oscura, para hacer constraste con las letras
+*/
+#blackscreen{
+  background-color: black;
+  opacity: 0.7;
+  height: 100vh;
+}
